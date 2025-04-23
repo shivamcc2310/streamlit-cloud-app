@@ -50,13 +50,14 @@ def main():
         recommendations = gen_ai_investment_recommendations(name, age, job_type, monthly_income, risk_appetite)
         st.markdown(recommendations, unsafe_allow_html=True)
 
-if st.button("Submit and Go to Investment App"):
-    st.markdown(
-        """
-        <meta http-equiv="refresh" content="0; url='https://apppage-cc.streamlit.app/'" />
-        """,
-        unsafe_allow_html=True
-    )
+    # Submit button at the end
+    if st.button("Submit and Go to Investment App"):
+        st.markdown(
+            """
+            <meta http-equiv="refresh" content="0; url='https://apppage-cc.streamlit.app/'" />
+            """,
+            unsafe_allow_html=True
+        )
 
 if __name__ == '__main__':
     main()
